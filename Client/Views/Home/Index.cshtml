@@ -4,20 +4,30 @@
 
 <!DOCTYPE html>
 
-<html>
+<html data-ng-app="app">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+    <script src="~/app/app.js"></script>
 </head>
 <body>
 <div id="body">
     <button id="poco">poco</button>
     <button id="derived">derived</button>
 
+    <div data-ng-controller="HomeController">
+        Hello {{hello}} <br />
+        <button id="ng-poco" data-ng-click="poco()">poco</button>
+        <button id="ng-derived" data-ng-click="derived()">derived</button>
+
+    </div>
+
     <script>
         $(document).ready(function () {
+            $.support.cors = true;
             $('#poco').click(function () {
                 $.post('http://localhost:30696/api/values/poco', { Name: 'poco' });
             });
@@ -26,6 +36,31 @@
                 $.post('http://localhost:30696/api/values/derived', { Name: 'derived' });
             });
         });
+
+
+        function HomeController($scope, $http) {
+            $scope.hello = "world!";
+            $scope.poco = function () {
+                $http.post('http://localhost:30696/api/values/poco', { Name: 'poco' }).
+                    success(function (response) {
+                        alert('ContentController.poco');
+                    }).
+                    error(function (message) {
+                        alert('FAILED EXECUTE ContentController.poco');
+                    });
+            }
+
+            $scope.derived = function () {
+                $http.post('http://localhost:30696/api/values/derived', { Name: 'derived' }).
+                    success(function (response) {
+                        alert('ContentController.derived');
+                    }).
+                    error(function (message) {
+                        alert('FAILED EXECUTE ContentController.derived');
+                    });
+            }
+        }
+
     </script>
 </div>
 
