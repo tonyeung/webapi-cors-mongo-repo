@@ -1,0 +1,16 @@
+﻿<div id="body">
+    <button id="poco">poco</button>
+    <button id="derived">derived</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#poco').click(function () {
+                $.post('/api/values/poco', { Name: 'poco' });
+            });
+
+            $('#derived').click(function () {
+                $.post('/api/values/derived', { Name: 'derived' });
+            });
+        });
+    </script>
+</div>

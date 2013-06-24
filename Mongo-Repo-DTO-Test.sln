@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mongo-Repo-DTO-Test", "Mongo-Repo-DTO-Test\Mongo-Repo-DTO-Test.csproj", "{CDA5B385-F0D9-46AD-A30A-4A38579A3E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{8F30AD75-3C49-47B1-80DD-A6E9016C349C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA5B385-F0D9-46AD-A30A-4A38579A3E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA5B385-F0D9-46AD-A30A-4A38579A3E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA5B385-F0D9-46AD-A30A-4A38579A3E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA5B385-F0D9-46AD-A30A-4A38579A3E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F30AD75-3C49-47B1-80DD-A6E9016C349C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F30AD75-3C49-47B1-80DD-A6E9016C349C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F30AD75-3C49-47B1-80DD-A6E9016C349C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F30AD75-3C49-47B1-80DD-A6E9016C349C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
