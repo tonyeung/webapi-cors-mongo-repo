@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Mongo_Repo_DTO_Test
 {
@@ -23,6 +24,8 @@ namespace Mongo_Repo_DTO_Test
             // To disable tracing in your application, please comment out or remove the following line of code
             // For more information, refer to: http://www.asp.net/web-api
             config.EnableSystemDiagnosticsTracing();
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 }
